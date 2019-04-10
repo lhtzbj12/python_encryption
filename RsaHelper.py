@@ -169,13 +169,13 @@ fVnlA89OJr0poOpSg+eNAkAKY85SR9KASaTiDBoPpJ8N805XEhd0Kq+ghzSThxL3
 fVtKUQLiCh7Yd8oMd/G5S3xWJHUXSioATT8uPRH2bOb/
 -----END RSA PRIVATE KEY-----'''
 
-    #r = Rsa(pri_file='rsa_private_key.pem', pub_file='rsa_public_key.pem')
+    #r = RsaHelper(pri_file='private_key.pem', pub_file='public_key.pem')
     r = RsaHelper(pub_skey=pub_key,pri_skey=pri_key)
     data = "hello word 中国"
     encrydata = r.enc_bytes(data.encode(encoding='utf-8'))
     encrydata =base64.b64encode(encrydata)
     print(encrydata)
-    #encrydata = 'uDeQATxRbbkjTBVHXa6yi8B0KOIu7HLZuvKpXz5KNYQ8RRUTE5P3MF9d4hOG3qq+zk5z8y/1EngzFvpbsljP5qc71YQZbJEUAXARBAWB9ex7GyVlLzIA/T5bF7OmcoCr4fkWt4OYzC0aaFsKsmGDXS6aWGjD6ObulIjizDZiv8k='
+    encrydata = 'uDeQATxRbbkjTBVHXa6yi8B0KOIu7HLZuvKpXz5KNYQ8RRUTE5P3MF9d4hOG3qq+zk5z8y/1EngzFvpbsljP5qc71YQZbJEUAXARBAWB9ex7GyVlLzIA/T5bF7OmcoCr4fkWt4OYzC0aaFsKsmGDXS6aWGjD6ObulIjizDZiv8k='
     encrydata = base64.b64decode(encrydata)
     encrydata = r.dec_bytes(encrydata)
     print(encrydata.decode("utf-8"))
