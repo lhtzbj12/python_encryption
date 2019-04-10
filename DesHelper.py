@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+# 依赖包 pip install pyDes
 import base64
 import pyDes
 

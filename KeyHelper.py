@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+# 依赖包 pip install pycryptodome
+# 如果仍然报没有Module可以尝试将 python安装目录下site-packages的子文件夹crypto改成Crypto
 from Crypto import Random
 from Crypto.PublicKey import RSA
 # 利用伪随机数来生成私钥和公钥
